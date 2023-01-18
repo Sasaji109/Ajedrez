@@ -15,23 +15,4 @@ public class Pieza {
     public String getColor() {
         return color;
     }
-
-    public boolean validoMovimiento (Movimiento mov) {
-        boolean respuesta = false;
-        if (mov.esVertical() || mov.esVertical())
-            respuesta = true;
-        return respuesta;
-    }
-
-    public boolean validoMovimiento (Movimiento mov) {
-        return mov.esVertical() || mov.esVertical();
-    }
-
-    @Override
-    public String toString() {
-        return "Pieza{" +
-                "color='" + color + '\'' +
-                ", nombre='" + nombre + '\'' +
-                '}';
-    }
 }
