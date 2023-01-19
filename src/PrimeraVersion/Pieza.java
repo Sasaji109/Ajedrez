@@ -1,6 +1,6 @@
 package PrimeraVersion;
 
-public class Pieza {
+public abstract class Pieza {
 
     //Atributos
     private String color;
@@ -12,7 +12,13 @@ public class Pieza {
         this.nombre = nombre;
     }
 
+    //Getters
     public String getColor() {
         return color;
     }
+    public String getNombre() {
+        return nombre;
+    }
+
+    public abstract boolean validoMovimiento (Movimiento mov);
 }

@@ -7,7 +7,6 @@ public class Movimiento {
     private Posicion posFinal;
 
     //Constructores
-    public Movimiento() {}
     public Movimiento(Posicion posInicial, Posicion posFinal) {
         this.posInicial = posInicial;
         this.posFinal = posFinal;
