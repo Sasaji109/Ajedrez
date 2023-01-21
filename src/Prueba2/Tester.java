@@ -8,18 +8,17 @@ public class Tester {
 
         Figura listadoFiguras[][] = new Figura[2][2];
 
-        listadoFiguras[0][0] = new Figura("T1","blanco");
-        listadoFiguras[0][1] = new Figura("T2","blanco");
-        listadoFiguras[1][0] = new Figura("T3","negro");
-        listadoFiguras[1][1] = new Figura("T4","negro");
+        listadoFiguras[0][0] = new Figura(" T1 ", "blanco");
+        listadoFiguras[0][1] = new Figura(" T2 ", "blanco");
+        listadoFiguras[1][1] = new Figura(" T4 ", "negro");
 
 
         for (int i = 0; i < listadoFiguras.length; i++) {
             for (int j = 0; j < 2; j++) {
-                System.out.print(listadoFiguras [i][j]);
+                System.out.print(listadoFiguras[i][j]);
             }
             System.out.print("\n");
         }
-    }
 
+    }
 }
