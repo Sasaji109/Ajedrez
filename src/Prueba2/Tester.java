@@ -1,7 +1,5 @@
 package Prueba2;
 
-import Prueba.Persona;
-
 public class Tester {
 
     public static void main(String[] args) {

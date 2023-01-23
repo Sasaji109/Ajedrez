@@ -4,12 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d10c12d3-9e6e-49af-ad62-516a4cb8432e" name="Changes" comment="Tercer commit">
+    <list default="true" id="d10c12d3-9e6e-49af-ad62-516a4cb8432e" name="Changes" comment="Septimo commit">
+      <change afterPath="$PROJECT_DIR$/src/PrimeraVersion/Juego.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VersionParadigm/Alfil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VersionParadigm/Caballo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VersionParadigm/Dama.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VersionParadigm/Juego.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VersionParadigm/Movimiento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VersionParadigm/Peon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VersionParadigm/Pieza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VersionParadigm/Posicion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VersionParadigm/Rey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VersionParadigm/Tablero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VersionParadigm/Torre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Pieza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Pieza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Reina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Dama.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Movimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Movimiento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Tester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Tester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Prueba2/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Prueba2/Tester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,11 +63,25 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="VersionParadigm" />
       <recent name="Prueba2" />
       <recent name="Prueba" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PrimeraVersion.Tester">
+  <component name="RunManager" selected="Application.Juego">
+    <configuration name="Juego" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PrimeraVersion.Juego" />
+      <module name="Ajedrez" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="PrimeraVersion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PrimeraVersion.Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PrimeraVersion.Tester" />
       <module name="Ajedrez" />
@@ -97,6 +123,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Juego" />
         <item itemvalue="Application.PrimeraVersion.Tester" />
         <item itemvalue="Application.Prueba2.Tester" />
         <item itemvalue="Application.Tester" />
@@ -116,6 +143,7 @@
       <workItem from="1674042840976" duration="4670000" />
       <workItem from="1674117022378" duration="3254000" />
       <workItem from="1674206791320" duration="3238000" />
+      <workItem from="1674477466059" duration="4897000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1673877893486</created>
@@ -152,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674120283251</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Septimo commit">
+      <created>1674468674677</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674468674677</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +197,7 @@
     <MESSAGE value="Primer commit" />
     <MESSAGE value="Segundo commit" />
     <MESSAGE value="Tercer commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tercer commit" />
+    <MESSAGE value="Septimo commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Septimo commit" />
   </component>
 </project>

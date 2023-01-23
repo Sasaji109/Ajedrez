@@ -1,8 +1,10 @@
 package PrimeraVersion;
 
-public class Tester {
+
+public class Juego {
 
     public static void main(String[] args) {
 
     }
+
 }

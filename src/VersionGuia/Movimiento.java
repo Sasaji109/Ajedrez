@@ -1,18 +1,19 @@
-package PrimeraVersion;
+package VersionGuia;
 
 public class Movimiento {
 
-    //Atributos
     private Posicion posInicial;
     private Posicion posFinal;
 
-    //Constructores
+    public Movimiento() {
+
+    }
+
     public Movimiento(Posicion posInicial, Posicion posFinal) {
         this.posInicial = posInicial;
         this.posFinal = posFinal;
     }
 
-    //Métodos
     public boolean esVertical() {
         return false;
     }
@@ -32,5 +33,4 @@ public class Movimiento {
     public int saltoVertical() {
         return 0;
     }
-
 }
