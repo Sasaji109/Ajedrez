@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d10c12d3-9e6e-49af-ad62-516a4cb8432e" name="Changes" comment="Tercer commit">
-      <change afterPath="$PROJECT_DIR$/src/Prueba/Tester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Prueba2/Figura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Prueba2/Tester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Prueba/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Prueba/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Prueba/EmpleadoApp.java" beforeDir="false" />
-    </list>
+    <list default="true" id="d10c12d3-9e6e-49af-ad62-516a4cb8432e" name="Changes" comment="Cuarto commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +95,7 @@
       <workItem from="1674041925560" duration="322000" />
       <workItem from="1674042840976" duration="4670000" />
       <workItem from="1674117022378" duration="3254000" />
-      <workItem from="1674206791320" duration="3238000" />
+      <workItem from="1674206791320" duration="3270000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1673877893486</created>
@@ -139,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674120283251</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Cuarto commit">
+      <created>1674211588161</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674211588161</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +149,7 @@
     <MESSAGE value="Primer commit" />
     <MESSAGE value="Segundo commit" />
     <MESSAGE value="Tercer commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tercer commit" />
+    <MESSAGE value="Cuarto commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cuarto commit" />
   </component>
 </project>
