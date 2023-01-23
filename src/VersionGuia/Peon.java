@@ -1,8 +1,8 @@
-package PrimeraVersion;
+package VersionGuia;
 
-public class Reina extends Pieza {
+public class Peon extends Pieza {
 
-    public Reina(String color, String nombre) {
+    public Peon(String color, String nombre) {
         super(color, nombre);
     }
 
@@ -10,4 +10,5 @@ public class Reina extends Pieza {
     public boolean validoMovimiento(Movimiento mov) {
         return false;
     }
+
 }

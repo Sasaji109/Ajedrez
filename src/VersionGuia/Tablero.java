@@ -1,4 +1,4 @@
-package PrimeraVersion;
+package VersionGuia;
 
 public class Tablero {
 
@@ -55,5 +55,38 @@ public class Tablero {
             System.out.print("\n");
         }
     }
+
+    public boolean hayPieza(int fila,int columna) {
+
+        return false;
+    }
+    public boolean hayPieza(Posicion pos) {
+
+        return false;
+    }
+    public boolean hayPiezasEntre(Movimiento mov) {
+
+        return false;
+    }
+    public void ponPieza(Pieza figura, int fila, int columna) {
+
+    }
+    public void ponPieza(Pieza figura, Posicion Pos) {
+
+    }
+    public void quitaPieza(int fila,int columna) {
+
+    }
+    public void QuitaPieza(Posicion pos) {
+
+    }
+    public Pieza DevuelvePieza(int fila,int columna){
+        return null;
+    }
+    public Pieza DevuelvePieza(Posicion pos) {
+
+        return null;
+    }
+
 
 }
