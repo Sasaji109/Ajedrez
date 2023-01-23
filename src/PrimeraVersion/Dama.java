@@ -1,8 +1,8 @@
 package PrimeraVersion;
 
-public class Reina extends Pieza {
+public class Dama extends Pieza {
 
-    public Reina(String color, String nombre) {
+    public Dama(String color, String nombre) {
         super(color, nombre);
     }
 

@@ -20,5 +20,11 @@ public abstract class Pieza {
         return nombre;
     }
 
+    //Métodos
     public abstract boolean validoMovimiento (Movimiento mov);
+
+    @Override
+    public String toString() {
+        return nombre;
+    }
 }
