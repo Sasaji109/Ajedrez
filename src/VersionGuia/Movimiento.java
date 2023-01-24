@@ -5,10 +5,6 @@ public class Movimiento {
     private Posicion posInicial;
     private Posicion posFinal;
 
-    public Movimiento() {
-
-    }
-
     public Movimiento(Posicion posInicial, Posicion posFinal) {
         this.posInicial = posInicial;
         this.posFinal = posFinal;

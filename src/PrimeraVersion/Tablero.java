@@ -5,6 +5,7 @@ public class Tablero {
     Pieza tablero[][] = new Pieza[8][8];
 
     public Tablero() {
+
         tablero[0][0] = new Torre("negro", "T");
         tablero[0][1] = new Caballo("negro", "C");
         tablero[0][2] = new Alfil("negro", "A");
@@ -13,23 +14,6 @@ public class Tablero {
         tablero[0][5] = new Alfil("negro", "A");
         tablero[0][6] = new Caballo("negro", "C");
         tablero[0][7] = new Torre("negro", "T");
-        tablero[1][0] = new Peon("negro", "P");
-        tablero[1][1] = new Peon("negro", "P");
-        tablero[1][2] = new Peon("negro", "P");
-        tablero[1][3] = new Peon("negro", "P");
-        tablero[1][4] = new Peon("negro", "P");
-        tablero[1][5] = new Peon("negro", "P");
-        tablero[1][6] = new Peon("negro", "P");
-        tablero[1][7] = new Peon("negro", "P");
-
-        tablero[6][0] = new Peon("blanco", "P");
-        tablero[6][1] = new Peon("blanco", "P");
-        tablero[6][2] = new Peon("blanco", "P");
-        tablero[6][3] = new Peon("blanco", "P");
-        tablero[6][4] = new Peon("blanco", "P");
-        tablero[6][5] = new Peon("blanco", "P");
-        tablero[6][6] = new Peon("blanco", "P");
-        tablero[6][7] = new Peon("blanco", "P");
         tablero[7][0] = new Torre("blanco", "T");
         tablero[7][1] = new Caballo("blanco", "C");
         tablero[7][2] = new Alfil("blanco", "A");
@@ -38,13 +22,23 @@ public class Tablero {
         tablero[7][5] = new Alfil("blanco", "A");
         tablero[7][6] = new Caballo("blanco", "C");
         tablero[7][7] = new Torre("blanco", "T");
+
+        for (int i = 0; i < tablero.length; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (i == 1) {
+                    tablero[i][j] = new Peon("negro", "P");
+                }
+                if (i == 6) {
+                    tablero[i][j] = new Peon("blanco", "P");
+                }
+            }
+        }
+
     }
 
     public void pintarTablero() {
-
-
         for (int i = 0; i < tablero.length; i++) {
-            for (int j = 0; j < 2; j++) {
+            for (int j = 0; j < 8; j++) {
                 if (tablero[i][j] == null) {
                     System.out.print("[ ]");
                 }

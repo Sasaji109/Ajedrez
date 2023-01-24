@@ -2,6 +2,10 @@ package Prueba2;
 
 public class Tester {
 
+    public static final String ANSI_WHITE = "\u001B[37m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RESET = "\u001B[0m";
+
     public static void main(String[] args) {
 
         Figura listadoFiguras[][] = new Figura[2][2];
@@ -13,7 +17,7 @@ public class Tester {
 
         for (int i = 0; i < listadoFiguras.length; i++) {
             for (int j = 0; j < 2; j++) {
-                System.out.print(listadoFiguras[i][j]);
+                System.out.print(ANSI_WHITE + listadoFiguras[i][j] + ANSI_RESET);
             }
             System.out.print("\n");
         }
