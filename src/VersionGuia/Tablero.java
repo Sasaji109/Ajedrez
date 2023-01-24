@@ -41,8 +41,6 @@ public class Tablero {
     }
 
     public void pintarTablero() {
-
-
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < 2; j++) {
                 if (tablero[i][j] == null) {

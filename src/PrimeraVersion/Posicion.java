@@ -7,7 +7,6 @@ public class Posicion {
     private int columna;
 
     //Constructores
-    public Posicion() {}
     public Posicion(int fila, int columna) {
         this.fila = fila;
         this.columna = columna;
