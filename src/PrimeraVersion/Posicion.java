@@ -7,7 +7,6 @@ public class Posicion {
     private int columna;
 
     //Constructores
-    public Posicion() {}
     public Posicion(int fila, int columna) {
         this.fila = fila;
         this.columna = columna;
@@ -26,14 +25,5 @@ public class Posicion {
     }
     public void setColumna(int columna) {
         this.columna = columna;
-    }
-
-    //Métodos
-    @Override
-    public String toString() {
-        return "Posicion{" +
-                "fila=" + fila +
-                ", columna=" + columna +
-                '}';
     }
 }

@@ -6,8 +6,14 @@ public class Rey extends Pieza {
         super(color, nombre);
     }
 
+    public Rey(String colorP) {
+        super(colorP);
+    }
+
     @Override
     public boolean validoMovimiento(Movimiento mov) {
         return false;
     }
+
+
 }

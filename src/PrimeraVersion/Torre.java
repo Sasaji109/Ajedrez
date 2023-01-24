@@ -6,8 +6,14 @@ public class Torre extends Pieza {
         super(color, nombre);
     }
 
+    public Torre(String colorP) {
+        super(colorP);
+    }
+
     @Override
     public boolean validoMovimiento(Movimiento mov) {
-        return false;
+        return mov.esVertical() || mov.esHorizontal();
     }
+
+
 }

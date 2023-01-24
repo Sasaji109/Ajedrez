@@ -6,8 +6,14 @@ public class Dama extends Pieza {
         super(color, nombre);
     }
 
+    public Dama(String colorP) {
+        super(colorP);
+    }
+
     @Override
     public boolean validoMovimiento(Movimiento mov) {
         return false;
     }
+
+
 }

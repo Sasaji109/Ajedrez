@@ -6,8 +6,14 @@ public class Alfil extends Pieza {
         super(color, nombre);
     }
 
+    public Alfil(String colorP) {
+        super(colorP);
+    }
+
     @Override
     public boolean validoMovimiento(Movimiento mov) {
-        return false;
+        return mov.esDiagonal();
     }
+
+
 }
