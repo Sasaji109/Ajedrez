@@ -31,24 +31,26 @@ public class Movimiento {
 
     public boolean esDiagonal() {
         boolean respuesta = false;
-        int diferF = posInicial.getFila() - posFinal.getFila();
-        int diferC = posInicial.getColumna() - posFinal.getColumna();
-        Math.abs(diferF);
-        Math.abs(diferC);
+        int diferF = saltoVertical();
+        int diferC = saltoHorizontal();
+        diferF=Math.abs(diferF);
+        diferC=Math.abs(diferC);
         if (diferF == diferC) {
             respuesta = true;
         }
         return respuesta;
+        //return Math.abs(saltoHorizontal())==Math.abs(saltoVertical());
+
     } //absoluto llamando a los de las abajo
 
 
 
     public int saltoHorizontal() {
-        return 0;
+        return posInicial.getColumna() - posFinal.getColumna();
     }
 
     public int saltoVertical() {
-        return 0;
+        return posInicial.getFila() - posFinal.getFila();
     }
 
 }
