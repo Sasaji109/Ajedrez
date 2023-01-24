@@ -14,16 +14,34 @@ public class Movimiento {
 
     //Métodos
     public boolean esVertical() {
-        return false;
+        boolean respuesta = false;
+        if (posInicial.getColumna() == posFinal.getColumna()) {
+            respuesta = true;
+        }
+        return respuesta;
     }
 
     public boolean esHorizontal() {
-        return false;
+        boolean respuesta = false;
+        if (posInicial.getFila() == posFinal.getFila()) {
+            respuesta = true;
+        }
+        return respuesta;
     }
 
     public boolean esDiagonal() {
-        return false;
-    }
+        boolean respuesta = false;
+        int diferF = posInicial.getFila() - posFinal.getFila();
+        int diferC = posInicial.getColumna() - posFinal.getColumna();
+        Math.abs(diferF);
+        Math.abs(diferC);
+        if (diferF == diferC) {
+            respuesta = true;
+        }
+        return respuesta;
+    } //absoluto llamando a los de las abajo
+
+
 
     public int saltoHorizontal() {
         return 0;

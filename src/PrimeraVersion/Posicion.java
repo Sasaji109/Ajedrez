@@ -26,13 +26,4 @@ public class Posicion {
     public void setColumna(int columna) {
         this.columna = columna;
     }
-
-    //Métodos
-    @Override
-    public String toString() {
-        return "Posicion{" +
-                "fila=" + fila +
-                ", columna=" + columna +
-                '}';
-    }
 }

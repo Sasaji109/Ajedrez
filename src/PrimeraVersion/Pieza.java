@@ -12,6 +12,14 @@ public abstract class Pieza {
         this.nombre = nombre;
     }
 
+    public Pieza(String colorP) {
+        color = colorP;
+        if (color.equals("colorP"))
+            nombre = this.getClass().getSimpleName().charAt(0)+"n";
+        else
+            nombre = this.getClass().getSimpleName().charAt(0)+"b";
+    }
+
     //Getters
     public String getColor() {
         return color;

@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d10c12d3-9e6e-49af-ad62-516a4cb8432e" name="Changes" comment="Septimo commit">
+    <list default="true" id="d10c12d3-9e6e-49af-ad62-516a4cb8432e" name="Changes" comment="Octavo commit">
+      <change afterPath="$PROJECT_DIR$/src/PrimeraVersion/Tester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Alfil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Alfil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Caballo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Caballo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Dama.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Dama.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Juego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Movimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Movimiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Peon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Peon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Pieza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Pieza.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Posicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Posicion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Rey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Rey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VersionGuia/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VersionGuia/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Torre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Torre.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +64,7 @@
       <recent name="Prueba" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Juego">
+  <component name="RunManager" selected="Application.PrimeraVersion.Tester">
     <configuration name="Juego" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PrimeraVersion.Juego" />
       <module name="Ajedrez" />
@@ -111,8 +119,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Juego" />
         <item itemvalue="Application.PrimeraVersion.Tester" />
+        <item itemvalue="Application.Juego" />
         <item itemvalue="Application.Prueba2.Tester" />
         <item itemvalue="Application.Tester" />
       </list>
@@ -175,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674468674677</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Octavo commit">
+      <created>1674549551640</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674549551640</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +201,7 @@
     <MESSAGE value="Segundo commit" />
     <MESSAGE value="Tercer commit" />
     <MESSAGE value="Septimo commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Septimo commit" />
+    <MESSAGE value="Octavo commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Octavo commit" />
   </component>
 </project>

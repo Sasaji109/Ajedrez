@@ -6,8 +6,14 @@ public class Caballo extends Pieza {
         super(color, nombre);
     }
 
+    public Caballo(String colorP) {
+        super(colorP);
+    }
+
     @Override
     public boolean validoMovimiento(Movimiento mov) {
         return false;
     }
+
+
 }
