@@ -38,4 +38,6 @@ public class Persona {
         return nombre;
     }
 
+    //https://www.delftstack.com/es/howto/java/how-to-convert-character-to-ascii-numeric-value-in-java/
+
 }

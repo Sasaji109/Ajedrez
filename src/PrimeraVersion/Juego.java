@@ -19,11 +19,12 @@ public class Juego {
 
     //Métodos
     public String toString() {
-        String cadena = "Blancas";
+        String cadena = "blanco";
         if (Turno == false)
-            cadena = "Negras";
+            cadena = "negro";
         return cadena;
     }
+
 
     public Movimiento validar(String jugada, Tablero tablero) {
 
@@ -43,15 +44,11 @@ public class Juego {
             filaFinal = letras[2]-49;//para que se queda de 0..7, al tener el ascii >=49
             columnaFinal = letras[3]-65;//para que se queda de 0..7, al tener el ascii >=49
 
-            //https://www.delftstack.com/es/howto/java/how-to-convert-character-to-ascii-numeric-value-in-java/
-
             if (tablero.tablero[filaInicial][columnaInicial]==null) {
                 System.out.println("Error: no hay pieza en posición inicial");
-            } else if(tablero.tablero[filaFinal][columnaFinal]==null) {
-                System.out.println("Error: no hay pieza en posición final");
-            } else if(Turno == false) { // && color de pieza blanca
+            } else if ((tablero.tablero[filaFinal][columnaFinal]!=null) && (tablero.tablero[filaFinal][columnaFinal].getColor().equals(this.toString()))) {
                 System.out.println("Error: el color de la pieza no coincide con el turno");
-            } else if(Turno == true) { // && color de pieza negra
+            } else if ((tablero.tablero[filaInicial][columnaInicial]!=null) && (tablero.tablero[filaInicial][columnaInicial].getColor().equals(this.toString()))) { // && color !=turno
                 System.out.println("Error: el color de la pieza no coincide con el turno");
             } else { //ya no hay errores
                 mov = new Movimiento(new Posicion(filaInicial,columnaInicial), new Posicion(filaFinal,columnaFinal));
