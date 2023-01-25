@@ -1,5 +1,8 @@
 package PrimeraVersion;
 
+import VersionGuia.Movimiento;
+import VersionGuia.Posicion;
+
 public class Tablero {
 
     public static final String ANSI_RESET = "\u001B[0m";
@@ -51,4 +54,18 @@ public class Tablero {
         System.out.print("\n");
     }
 
+    public boolean hayPieza(int fila,int columna) {
+        boolean respuesta;
+        if (tablero[fila][columna] == null) {
+            return false;
+        }
+        return true;
+    }
+    public boolean hayPiezasEntre(Movimiento mov) {
+        boolean respuesta;
+        if (mov == null) {
+            return false;
+        }
+        return true;
+    }
 }

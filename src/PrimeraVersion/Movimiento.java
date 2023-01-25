@@ -33,22 +33,18 @@ public class Movimiento {
         boolean respuesta = false;
         int diferF = saltoVertical();
         int diferC = saltoHorizontal();
-        diferF=Math.abs(diferF);
-        diferC=Math.abs(diferC);
+        diferF = Math.abs(diferF);
+        diferC = Math.abs(diferC);
         if (diferF == diferC) {
             respuesta = true;
         }
         return respuesta;
-        //return Math.abs(saltoHorizontal())==Math.abs(saltoVertical());
-
-    } //absoluto llamando a los de las abajo
-
-
+        //return Math.abs(saltoHorizontal()) == Math.abs(saltoVertical());
+    }
 
     public int saltoHorizontal() {
         return posInicial.getColumna() - posFinal.getColumna();
     }
-
     public int saltoVertical() {
         return posInicial.getFila() - posFinal.getFila();
     }

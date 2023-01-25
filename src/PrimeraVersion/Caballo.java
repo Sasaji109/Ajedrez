@@ -14,6 +14,4 @@ public class Caballo extends Pieza {
     public boolean validoMovimiento(Movimiento mov) {
         return false;
     }
-
-
 }
