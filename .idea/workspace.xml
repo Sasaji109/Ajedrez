@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d10c12d3-9e6e-49af-ad62-516a4cb8432e" name="Changes" comment="Tercer commit">
+    <list default="true" id="d10c12d3-9e6e-49af-ad62-516a4cb8432e" name="Changes" comment="Octavo commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Prueba2/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Prueba2/Tester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VersionGuia/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VersionGuia/Juego.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
