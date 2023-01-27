@@ -49,4 +49,11 @@ public class Movimiento {
         return posInicial.getFila() - posFinal.getFila();
     }
 
+    @Override
+    public String toString() {
+        return "Movimiento{" +
+                "posInicial=" + posInicial +
+                ", posFinal=" + posFinal +
+                '}';
+    }
 }

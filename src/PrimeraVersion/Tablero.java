@@ -1,8 +1,10 @@
 package PrimeraVersion;
-
-import VersionGuia.Movimiento;
-import VersionGuia.Posicion;
-
+/**
+ * Ejemplo: Tablero.
+ *
+ * @author Samuel Sánchez Jiménez
+ * @version 27.1.2023
+ */
 public class Tablero {
 
     public static final String ANSI_RESET = "\u001B[0m";
@@ -55,17 +57,26 @@ public class Tablero {
     }
 
     public boolean hayPieza(int fila,int columna) {
-        boolean respuesta;
         if (tablero[fila][columna] == null) {
             return false;
         }
         return true;
     }
+    public boolean hayPieza(Posicion pos) {
+        return hayPieza(pos.getFila(),pos.getColumna());
+    }
+
     public boolean hayPiezasEntre(Movimiento mov) {
-        boolean respuesta;
-        if (mov == null) {
-            return false;
-        }
+
         return true;
     }
+
+    public void ponPieza(Pieza figura, int fila, int columna) {}
+    public void ponPieza(Pieza figura, Posicion Pos) {}
+
+    public void quitaPieza(int fila,int columna) {}
+    public void QuitaPieza(Posicion pos) {}
+
+    public Pieza DevuelvePieza(int fila, int columna) {return tablero[fila][columna];}
+    public Pieza DevuelvePieza(Posicion pos) {return DevuelvePieza(pos.getFila(), pos.getColumna());}
 }
