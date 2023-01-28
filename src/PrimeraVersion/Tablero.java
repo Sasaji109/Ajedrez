@@ -1,5 +1,8 @@
 package PrimeraVersion;
 
+import VersionGuia.Movimiento;
+import VersionGuia.Posicion;
+
 public class Tablero {
 
     Pieza tablero[][] = new Pieza[8][8];
@@ -56,4 +59,18 @@ public class Tablero {
         }
     }
 
+    public boolean hayPieza(int fila,int columna) {
+        boolean respuesta;
+        if (tablero[fila][columna] == null) {
+            return false;
+        }
+        return true;
+    }
+    public boolean hayPiezasEntre(Movimiento mov) {
+        boolean respuesta;
+        if (mov == null) {
+            return false;
+        }
+        return true;
+    }
 }

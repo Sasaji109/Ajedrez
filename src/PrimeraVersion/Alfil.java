@@ -14,6 +14,4 @@ public class Alfil extends Pieza {
     public boolean validoMovimiento(Movimiento mov) {
         return mov.esDiagonal();
     }
-
-
 }

@@ -10,15 +10,19 @@ public class Tester {
         Tablero tablero = new Tablero();
         Juego juego = new Juego(true);
 
-        //Bucle de juego
         Movimiento mov = null;
+
+        //Bucle de juego
+
         do {
             tablero.pintarTablero();
             System.out.println("Turno de:" + juego + ": Introduce jugada.");
             String jugada = lector.nextLine();
             //traducir jugada->movimiento válido, si no es válido que devuelva null
             mov = juego.validar(jugada, tablero);
+
         }while(mov==null);
+
         //if (mov != null)
         //preguntar al tablero a la pieza que hay en la posicion inicial si puede realizar movimiento
         //si es que sí, mover en el tablero
