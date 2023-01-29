@@ -1,23 +1,47 @@
 package PrimeraVersion;
 
+/**
+ * Juego: Clase que genera el turno del juego y que valida los movimientos
+ *
+ * @author Samuel Sánchez Jiménez
+ * @version 29.1.2023
+ */
 public class Juego {
 
-    private boolean Turno; //false negras, true blancas
+    /**
+     * Atributo: booleano de turno
+     * False para negras
+     * True para blancas
+     */
+    private boolean Turno;
 
-    //Constructor
+    /**
+     * Constructor por defecto
+     * @param turno
+     */
     public Juego(boolean turno) {
         Turno = turno;
     }
 
-    //Getter y Setter
+    /**
+     * Getter de turno
+     * @return turno
+     */
     public boolean isTurno() {
         return Turno;
     }
+    /**
+     * Setter de turno
+     * @param turno
+     */
     public void setTurno(boolean turno) {
         Turno = turno;
     }
 
-    //Métodos
+    /**
+     * Método toString, que devuelve en texto en juego
+     * @return
+     */
     public String toString() {
         String cadena = "blanco";
         if (Turno == false)
@@ -25,7 +49,12 @@ public class Juego {
         return cadena;
     }
 
-
+    /**
+     * Método que valida los movimientos, recorriendo varios errores
+     * @param jugada
+     * @param tablero
+     * @return mov
+     */
     public Movimiento validar(String jugada, Tablero tablero) {
 
         Movimiento mov = null;
@@ -39,16 +68,17 @@ public class Juego {
             System.out.println("Error: debe estar entre A y H, y 1 y 8");
         } else {  //tablero
 
-            filaInicial = letras[0]-49;//para que se queda de 0..7, al tener el ascii >=49
-            columnaInicial = letras[1]-65;//para que se queda de 0..7, al tener el ascii >=49
-            filaFinal = letras[2]-49;//para que se queda de 0..7, al tener el ascii >=49
-            columnaFinal = letras[3]-65;//para que se queda de 0..7, al tener el ascii >=49
+            columnaInicial = letras[0]-65;//para que se queda de 0..7, al tener el ascii >=49
+            filaInicial = letras[1]-49;//para que se queda de 0..7, al tener el ascii >=49
+            columnaFinal = letras[2]-65;//para que se queda de 0..7, al tener el ascii >=49
+            filaFinal = letras[3]-49;//para que se queda de 0..7, al tener el ascii >=49
 
-            if (tablero.tablero[filaInicial][columnaInicial]==null) {
+
+            if (tablero.hayPieza(filaInicial, columnaInicial)==false) { //!tablero.hayPieza(filaInicial,columnaInicial)
                 System.out.println("Error: no hay pieza en posición inicial");
             } else if ((tablero.tablero[filaFinal][columnaFinal]!=null) && (tablero.tablero[filaFinal][columnaFinal].getColor().equals(this.toString()))) {
-                System.out.println("Error: el color de la pieza no coincide con el turno");
-            } else if ((tablero.tablero[filaInicial][columnaInicial]!=null) && (tablero.tablero[filaInicial][columnaInicial].getColor().equals(this.toString()))) { // && color !=turno
+                System.out.println("Error: la casilla donde quieres llevarlo ya está ocupada");
+            } else if ((tablero.tablero[filaInicial][columnaInicial]!=null) && (!tablero.tablero[filaInicial][columnaInicial].getColor().equals(this.toString()))) { // && color !=turno
                 System.out.println("Error: el color de la pieza no coincide con el turno");
             } else { //ya no hay errores
                 mov = new Movimiento(new Posicion(filaInicial,columnaInicial), new Posicion(filaFinal,columnaFinal));
