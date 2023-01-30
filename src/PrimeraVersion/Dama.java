@@ -28,10 +28,11 @@ public class Dama extends Pieza {
     /**
      * Método para validad los movimientos del Dama
      * @param mov
+     * @param tablero
      * @return
      */
     @Override
-    public boolean validoMovimiento(Movimiento mov) {
-        return false;
+    public boolean validoMovimiento(Movimiento mov, Tablero tablero) {
+        return mov.esVertical() || mov.esHorizontal() || mov.esDiagonal();
     }
 }

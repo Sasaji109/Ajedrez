@@ -28,10 +28,11 @@ public class Caballo extends Pieza {
     /**
      * Método para validad los movimientos del Caballo
      * @param mov
+     * @param tablero
      * @return
      */
     @Override
-    public boolean validoMovimiento(Movimiento mov) {
+    public boolean validoMovimiento(Movimiento mov, Tablero tablero) {
         return false;
     }
 }

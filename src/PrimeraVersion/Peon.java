@@ -31,7 +31,26 @@ public class Peon extends Pieza {
      * @return
      */
     @Override
-    public boolean validoMovimiento(Movimiento mov) {
-        return false;
+    public boolean validoMovimiento(Movimiento mov, Tablero tablero) { /*
+        if (columna varía) {
+            return false;
+        } else if (filas no son iguales) {
+
+        }
+
+        if (color = negro) {
+            if () {
+
+            } else {
+                return false;
+            }
+        } else { //color = blanco
+            if () {
+
+            } else {
+                return false;
+            }
+        } */
+        return true;
     }
 }

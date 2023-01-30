@@ -28,6 +28,30 @@ public class Movimiento {
     }
 
     /**
+     * Getter de posInicial
+     * @return posición Inicial
+     */
+    public Posicion getPosInicial() {
+        return posInicial;
+    }
+
+    /**
+     *
+     * @param posInicial
+     */
+    public void setPosInicial(Posicion posInicial) {
+        this.posInicial = posInicial;
+    }
+
+    public Posicion getPosFinal() {
+        return posFinal;
+    }
+
+    public void setPosFinal(Posicion posFinal) {
+        this.posFinal = posFinal;
+    }
+
+    /**
      * Método que pregunta si el movimiento que se ha realizado ha sido vertical
      * @return respuesta
      */

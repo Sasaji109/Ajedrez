@@ -29,21 +29,15 @@ public class Tester {
             } while (mov == null);
 
             System.out.println(mov);
-            //pieza.validadMovimiento
-            //validad movimiento
-
-            //tablero.ponPieza(figura, getFila(), getColumna());
-            //poner pieza
-
-            //tablero.quitaPieza(getFila(), getColumna());
-            //quitar pieza
-
-            if (juego.getClass().equals(true)) {
-                juego.setTurno(false);
-            } else {
-                juego.setTurno(true);
-            } //cambiar turno
-
+            if (tablero.DevuelvePieza(mov.getPosInicial()).validoMovimiento(mov,tablero)) {
+                tablero.mover(mov);
+                if (juego.isTurno()) {
+                    juego.setTurno(false);
+                } else {
+                    juego.setTurno(true);
+                } //cambiar turno
+            }else
+                System.out.println("La pieza no puede realizar ese movimiento");
         } while (fin == false);
 
 

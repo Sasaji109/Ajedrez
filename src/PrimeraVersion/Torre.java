@@ -28,10 +28,11 @@ public class Torre extends Pieza {
     /**
      * Método para validad los movimientos del Torre
      * @param mov
+     * @param tablero
      * @return
      */
     @Override
-    public boolean validoMovimiento(Movimiento mov) {
+    public boolean validoMovimiento(Movimiento mov,Tablero tablero) {
         return mov.esVertical() || mov.esHorizontal();
     }
 }

@@ -50,9 +50,9 @@ public class Tablero {
             for (int j = 0; j < tablero.length; j++) {
                 if (tablero[i][j] == null) {
                     System.out.print("[  ]");
-                } else if (i == 0 | i == 1) {
+                } else if (tablero[i][j].getColor().equalsIgnoreCase("negro")) {
                     System.out.print(ANSI_BLACK + "[" + tablero[i][j] + "]" + ANSI_RESET);
-                } else if (i == 6 | i == 7) {
+                } else if (tablero[i][j].getColor().equalsIgnoreCase("blanco")) {
                     System.out.print(ANSI_WHITE + "[" + tablero[i][j] + "]" + ANSI_RESET);
                 }
             }
@@ -148,4 +148,9 @@ public class Tablero {
      * @return
      */
     public Pieza DevuelvePieza(Posicion pos) {return DevuelvePieza(pos.getFila(), pos.getColumna());}
+
+    public void mover(Movimiento mov) {
+        ponPieza(DevuelvePieza(mov.getPosInicial()),mov.getPosFinal());
+        quitaPieza(mov.getPosInicial());
+    }
 }
