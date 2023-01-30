@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d10c12d3-9e6e-49af-ad62-516a4cb8432e" name="Changes" comment="Décimo commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Juego.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Movimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Movimiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Posicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Posicion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Tester.java" afterDir="false" />
-    </list>
+    <list default="true" id="d10c12d3-9e6e-49af-ad62-516a4cb8432e" name="Changes" comment="Undécimo commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,7 +127,7 @@
       <workItem from="1674206791320" duration="3238000" />
       <workItem from="1674477466059" duration="4897000" />
       <workItem from="1674646236070" duration="6719000" />
-      <workItem from="1674811127160" duration="6943000" />
+      <workItem from="1674811127160" duration="7073000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1673877893486</created>
@@ -220,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674653169332</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Undécimo commit">
+      <created>1674819562209</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674819562209</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +234,7 @@
     <MESSAGE value="Octavo commit" />
     <MESSAGE value="Noveno commit" />
     <MESSAGE value="Décimo commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Décimo commit" />
+    <MESSAGE value="Undécimo commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Undécimo commit" />
   </component>
 </project>
