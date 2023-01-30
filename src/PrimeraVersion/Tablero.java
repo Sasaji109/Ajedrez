@@ -1,9 +1,9 @@
 package PrimeraVersion;
 /**
- * Ejemplo: Tablero.
+ * Tablero: Clase para generar el tablero y gestionar las piezas.
  *
  * @author Samuel Sánchez Jiménez
- * @version 27.1.2023
+ * @version 29.1.2023
  */
 public class Tablero {
 
@@ -13,6 +13,9 @@ public class Tablero {
 
     Pieza tablero[][];
 
+    /**
+     * Constructor del Tablero
+     */
     public Tablero() {
 
         tablero = new Pieza[8][8];
@@ -37,9 +40,11 @@ public class Tablero {
             tablero[1][j] = new Peon("negro");
             tablero[6][j] = new Peon("blanco");
         }
-
     }
 
+    /**
+     * Pinta el tablero con corchetes y colores
+     */
     public void pintarTablero() {
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero.length; j++) {
@@ -56,27 +61,91 @@ public class Tablero {
         System.out.print("\n");
     }
 
+    /**
+     * Comprueba si hay pieza en la fila y columna indicadas
+     * @param fila
+     * @param columna
+     * @return <ul>
+     * <li>true: hay pieza</li>
+     * <li>false: no hay pieza</li>
+     * </ul>
+     */
     public boolean hayPieza(int fila,int columna) {
         if (tablero[fila][columna] == null) {
             return false;
         }
         return true;
     }
+
+    /**
+     * Comprueba si hay pieza en la posición indicada
+     * @param pos
+     * @return hayPieza
+     */
     public boolean hayPieza(Posicion pos) {
         return hayPieza(pos.getFila(),pos.getColumna());
     }
 
+    /**
+     * Comprueba si hay hay piezas entre las dos posiciones indicadas
+     * @param mov
+     * @return <ul>
+     * <li>true: hay piezas</li>
+     * <li>false: no hay piezas</li>
+     * </ul>
+     */
     public boolean hayPiezasEntre(Movimiento mov) {
-
         return true;
     }
 
-    public void ponPieza(Pieza figura, int fila, int columna) {}
-    public void ponPieza(Pieza figura, Posicion Pos) {}
+    /**
+     * Pone una figura concreta en la fila y columna indicadas
+     * @param figura
+     * @param fila
+     * @param columna
+     */
+    public void ponPieza(Pieza figura, int fila, int columna) {
+        tablero[fila][columna] = figura;
+    }
 
-    public void quitaPieza(int fila,int columna) {}
-    public void QuitaPieza(Posicion pos) {}
+    /**
+     * Pone una figura concreta en la posición indicada
+     * @param figura
+     * @param pos
+     */
+    public void ponPieza(Pieza figura, Posicion pos) {
+        ponPieza(figura, pos.getFila(), pos.getColumna());
+    }
 
+    /**
+     * Quita la figura en la fila y columna indicadas
+     * @param fila
+     * @param columna
+     */
+    public void quitaPieza(int fila,int columna) {
+        tablero[fila][columna] = null;
+    }
+
+    /**
+     * Quita la figura en la posición indicado
+     * @param pos
+     */
+    public void quitaPieza(Posicion pos) {
+        quitaPieza(pos.getFila(), pos.getColumna());
+    }
+
+    /**
+     * Devuelve la pieza que se encuentra en la fila y columna indicadas
+     * @param fila
+     * @param columna
+     * @return tablero[][]
+     */
     public Pieza DevuelvePieza(int fila, int columna) {return tablero[fila][columna];}
+
+    /**
+     * Devuelve la pieza que se encuentra en la posición indicada
+     * @param pos
+     * @return
+     */
     public Pieza DevuelvePieza(Posicion pos) {return DevuelvePieza(pos.getFila(), pos.getColumna());}
 }

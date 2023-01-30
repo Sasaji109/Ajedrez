@@ -2,6 +2,12 @@ package PrimeraVersion;
 
 import java.util.Scanner;
 
+/**
+ * Tester: Clase para probar el juego
+ *
+ * @author Samuel Sánchez Jiménez
+ * @version 29.1.2023
+ */
 public class Tester {
 
     public static void main(String[] args) {
@@ -9,14 +15,11 @@ public class Tester {
         Tablero tablero = new Tablero();
         Juego juego = new Juego(true);
         Movimiento mov = null;
-        int fin = 0;
+        boolean fin = false;
 
         //Bucle de juego
-
         do {
-
             do {
-
                 tablero.pintarTablero();
                 System.out.println("Turno de: " + juego + ": Introduce jugada.");
                 String jugada = lector.nextLine();
@@ -26,18 +29,22 @@ public class Tester {
             } while (mov == null);
 
             System.out.println(mov);
+            //pieza.validadMovimiento
+            //validad movimiento
 
-            //if (mov != null)
-            //preguntar al tablero a la pieza que hay en la posicion inicial si puede realizar movimiento
-            //si es que sí, mover en el tablero
+            //tablero.ponPieza(figura, getFila(), getColumna());
+            //poner pieza
 
-            if (juego.equals(true)) {
+            //tablero.quitaPieza(getFila(), getColumna());
+            //quitar pieza
+
+            if (juego.getClass().equals(true)) {
                 juego.setTurno(false);
             } else {
                 juego.setTurno(true);
             } //cambiar turno
 
-        } while (fin == 0);
+        } while (fin == false);
 
 
 
