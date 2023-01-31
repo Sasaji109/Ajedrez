@@ -33,6 +33,10 @@ public class Caballo extends Pieza {
      */
     @Override
     public boolean validoMovimiento(Movimiento mov, Tablero tablero) {
-        return false;
+        if ((Math.abs(mov.saltoHorizontal()) == 1 && Math.abs(mov.saltoVertical()) == 2) || (Math.abs(mov.saltoHorizontal()) == 2 && Math.abs(mov.saltoVertical()) == 1)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

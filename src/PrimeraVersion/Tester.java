@@ -35,7 +35,7 @@ public class Tester {
                     juego.setTurno(false);
                 } else {
                     juego.setTurno(true);
-                } //cambiar turno
+                }
             }else
                 System.out.println("La pieza no puede realizar ese movimiento");
         } while (fin == false);

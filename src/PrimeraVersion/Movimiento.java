@@ -29,24 +29,32 @@ public class Movimiento {
 
     /**
      * Getter de posInicial
-     * @return posición Inicial
+     * @return posInicial
      */
     public Posicion getPosInicial() {
         return posInicial;
     }
 
     /**
-     *
+     * Setter de posicionInicial
      * @param posInicial
      */
     public void setPosInicial(Posicion posInicial) {
         this.posInicial = posInicial;
     }
 
+    /**
+     * Getter de posicionFinal
+     * @return posFinal
+     */
     public Posicion getPosFinal() {
         return posFinal;
     }
 
+    /**
+     * Setter de posicionFinal
+     * @param posFinal
+     */
     public void setPosFinal(Posicion posFinal) {
         this.posFinal = posFinal;
     }

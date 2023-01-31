@@ -68,17 +68,17 @@ public class Juego {
             System.out.println("Error: debe estar entre A y H, y 1 y 8");
         } else {  //tablero
 
-            columnaInicial = letras[0]-65;//para que se queda de 0..7, al tener el ascii >=49
-            filaInicial = letras[1]-49;//para que se queda de 0..7, al tener el ascii >=49
-            columnaFinal = letras[2]-65;//para que se queda de 0..7, al tener el ascii >=49
-            filaFinal = letras[3]-49;//para que se queda de 0..7, al tener el ascii >=49
+            columnaInicial = letras[0]-65;
+            filaInicial = letras[1]-49;
+            columnaFinal = letras[2]-65;
+            filaFinal = letras[3]-49;
 
 
             if (tablero.hayPieza(filaInicial, columnaInicial)==false) { //!tablero.hayPieza(filaInicial,columnaInicial)
                 System.out.println("Error: no hay pieza en posición inicial");
             } else if ((tablero.tablero[filaFinal][columnaFinal]!=null) && (tablero.tablero[filaFinal][columnaFinal].getColor().equals(this.toString()))) {
                 System.out.println("Error: la casilla donde quieres llevarlo ya está ocupada");
-            } else if ((tablero.tablero[filaInicial][columnaInicial]!=null) && (!tablero.tablero[filaInicial][columnaInicial].getColor().equals(this.toString()))) { // && color !=turno
+            } else if ((tablero.tablero[filaInicial][columnaInicial]!=null) && (!tablero.tablero[filaInicial][columnaInicial].getColor().equals(this.toString()))) {
                 System.out.println("Error: el color de la pieza no coincide con el turno");
             } else { //ya no hay errores
                 mov = new Movimiento(new Posicion(filaInicial,columnaInicial), new Posicion(filaFinal,columnaFinal));

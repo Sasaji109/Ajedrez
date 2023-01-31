@@ -10,6 +10,7 @@ public class Peon extends Pieza {
 
     /**
      * Constructor por defecto
+     *
      * @param color
      * @param nombre
      */
@@ -19,6 +20,7 @@ public class Peon extends Pieza {
 
     /**
      * Constructor pata confirmar color
+     *
      * @param colorP
      */
     public Peon(String colorP) {
@@ -26,31 +28,26 @@ public class Peon extends Pieza {
     }
 
     /**
-     * Método para validad los movimientos del Peon
+     * Método para validad los movimientos del Peón
+     *
      * @param mov
      * @return
      */
     @Override
-    public boolean validoMovimiento(Movimiento mov, Tablero tablero) { /*
-        if (columna varía) {
-            return false;
-        } else if (filas no son iguales) {
+    public boolean validoMovimiento(Movimiento mov, Tablero tablero) {
 
-        }
+        if (getColor() == "negro") {
 
-        if (color = negro) {
-            if () {
+            if (mov.getPosInicial().getFila() == 1 && mov.esVertical() && (mov.saltoVertical()==-1 || mov.saltoVertical()==-2) && !tablero.hayPieza(mov.getPosFinal())) {
+                return true;
+            } else if (mov.getPosInicial().getFila() != 1 && mov.esVertical() && mov.saltoVertical()==1 && !tablero.hayPieza(mov.getPosFinal())) {
+                return true;
+                } else {return false;}
 
-            } else {
-                return false;
-            }
-        } else { //color = blanco
-            if () {
-
-            } else {
-                return false;
-            }
-        } */
-        return true;
+        } else if (mov.getPosInicial().getFila() == 6 && mov.esVertical() && (mov.saltoVertical()==1 || mov.saltoVertical()==2) && !tablero.hayPieza(mov.getPosFinal())) {
+                return true;
+            } else if (mov.getPosInicial().getFila() != 6 && mov.esVertical() && mov.saltoVertical()==1 && !tablero.hayPieza(mov.getPosFinal())) {
+                return true;
+                } else {return false;}
     }
 }
