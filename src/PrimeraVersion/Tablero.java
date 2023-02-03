@@ -92,7 +92,6 @@ public class Tablero {
     /**
      * Comprueba si hay hay piezas entre las dos posiciones indicadas
      *
-     * @param mov
      * @return <ul>
      * <li>true: hay piezas</li>
      * <li>false: no hay piezas</li>
@@ -112,13 +111,13 @@ public class Tablero {
                     }
                 }
             } else {
-                for (int i = fila2; i < fila1 -1; i++) {
+                for (int i = fila2 + 1; i < fila1; i++) {
                     if (tablero[i][j] != null) {
                         return true;
                     }
                 }
             }
-        } else if (mov.esVertical()) {
+        } else if (mov.esHorizontal()) {
             int i = mov.getPosInicial().getFila();
             int col1 = mov.getPosInicial().getColumna();
             int col2 = mov.getPosFinal().getColumna();
@@ -129,14 +128,12 @@ public class Tablero {
                     }
                 }
             } else {
-                for (int j = col2; j < col1 - 1; j++) {
+                for (int j = col2 + 1; j < col1; j++) {
                     if (tablero[i][j] != null) {
                         return true;
                     }
                 }
             }
-        } else if (mov.esDiagonal()) {
-            return true;
         }
         return false;
     }

@@ -25,12 +25,11 @@ public class Tester {
                 String jugada = lector.nextLine();
                 //traducir jugada->movimiento válido, si no es válido que devuelva null
                 mov = juego.validar(jugada, tablero);
-                tablero.hayPiezasEntre(mov);
 
             } while (mov == null);
 
             System.out.println(mov);
-            if (tablero.DevuelvePieza(mov.getPosInicial()).validoMovimiento(mov,tablero)) {
+            if (tablero.DevuelvePieza(mov.getPosInicial()).validoMovimiento(mov,tablero) && !tablero.hayPiezasEntre(mov)) {
                 tablero.mover(mov);
                 if (juego.isTurno()) {
                     juego.setTurno(false);
