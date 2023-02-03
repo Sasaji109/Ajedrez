@@ -1,4 +1,5 @@
 package PrimeraVersion;
+
 /**
  * Tablero: Clase para generar el tablero y gestionar las piezas.
  *
@@ -63,6 +64,7 @@ public class Tablero {
 
     /**
      * Comprueba si hay pieza en la fila y columna indicadas
+     *
      * @param fila
      * @param columna
      * @return <ul>
@@ -70,7 +72,7 @@ public class Tablero {
      * <li>false: no hay pieza</li>
      * </ul>
      */
-    public boolean hayPieza(int fila,int columna) {
+    public boolean hayPieza(int fila, int columna) {
         if (tablero[fila][columna] == null) {
             return false;
         }
@@ -79,15 +81,17 @@ public class Tablero {
 
     /**
      * Comprueba si hay pieza en la posición indicada
+     *
      * @param pos
      * @return hayPieza
      */
     public boolean hayPieza(Posicion pos) {
-        return hayPieza(pos.getFila(),pos.getColumna());
+        return hayPieza(pos.getFila(), pos.getColumna());
     }
 
     /**
      * Comprueba si hay hay piezas entre las dos posiciones indicadas
+     *
      * @param mov
      * @return <ul>
      * <li>true: hay piezas</li>
@@ -95,11 +99,51 @@ public class Tablero {
      * </ul>
      */
     public boolean hayPiezasEntre(Movimiento mov) {
-        return true;
+        if (DevuelvePieza(mov.getPosInicial()).getNombre().equals("caballo")) {
+            return false; //me da lo mismo que haya piezas o no las va a poder saltar
+        } else if (mov.esVertical()) {
+            int j = mov.getPosInicial().getColumna();
+            int fila1 = mov.getPosInicial().getFila();
+            int fila2 = mov.getPosFinal().getFila();
+            if (fila1 < fila2) {
+                for (int i = fila1 + 1; i < fila2; i++) {
+                    if (tablero[i][j] != null) {
+                        return true;
+                    }
+                }
+            } else {
+                for (int i = fila2; i < fila1 -1; i++) {
+                    if (tablero[i][j] != null) {
+                        return true;
+                    }
+                }
+            }
+        } else if (mov.esVertical()) {
+            int i = mov.getPosInicial().getFila();
+            int col1 = mov.getPosInicial().getColumna();
+            int col2 = mov.getPosFinal().getColumna();
+            if (col1 < col2) {
+                for (int j = col1 + 1; j < col2; j++) {
+                    if (tablero[i][j] != null) {
+                        return true;
+                    }
+                }
+            } else {
+                for (int j = col2; j < col1 - 1; j++) {
+                    if (tablero[i][j] != null) {
+                        return true;
+                    }
+                }
+            }
+        } else if (mov.esDiagonal()) {
+            return true;
+        }
+        return false;
     }
 
     /**
      * Pone una figura concreta en la fila y columna indicadas
+     *
      * @param figura
      * @param fila
      * @param columna
@@ -110,6 +154,7 @@ public class Tablero {
 
     /**
      * Pone una figura concreta en la posición indicada
+     *
      * @param figura
      * @param pos
      */
@@ -119,15 +164,17 @@ public class Tablero {
 
     /**
      * Quita la figura en la fila y columna indicadas
+     *
      * @param fila
      * @param columna
      */
-    public void quitaPieza(int fila,int columna) {
+    public void quitaPieza(int fila, int columna) {
         tablero[fila][columna] = null;
     }
 
     /**
      * Quita la figura en la posición indicado
+     *
      * @param pos
      */
     public void quitaPieza(Posicion pos) {
@@ -136,21 +183,32 @@ public class Tablero {
 
     /**
      * Devuelve la pieza que se encuentra en la fila y columna indicadas
+     *
      * @param fila
      * @param columna
      * @return tablero[][]
      */
-    public Pieza DevuelvePieza(int fila, int columna) {return tablero[fila][columna];}
+    public Pieza DevuelvePieza(int fila, int columna) {
+        return tablero[fila][columna];
+    }
 
     /**
      * Devuelve la pieza que se encuentra en la posición indicada
+     *
      * @param pos
      * @return
      */
-    public Pieza DevuelvePieza(Posicion pos) {return DevuelvePieza(pos.getFila(), pos.getColumna());}
+    public Pieza DevuelvePieza(Posicion pos) {
+        return DevuelvePieza(pos.getFila(), pos.getColumna());
+    }
 
+    /**
+     * Metodo que efectúa el movimiento de la pieza, primero la pone en la posición final y luego la quita en la inicial
+     *
+     * @param mov
+     */
     public void mover(Movimiento mov) {
-        ponPieza(DevuelvePieza(mov.getPosInicial()),mov.getPosFinal());
+        ponPieza(DevuelvePieza(mov.getPosInicial()), mov.getPosFinal());
         quitaPieza(mov.getPosInicial());
     }
 }

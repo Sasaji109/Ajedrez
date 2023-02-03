@@ -36,18 +36,21 @@ public class Peon extends Pieza {
     @Override
     public boolean validoMovimiento(Movimiento mov, Tablero tablero) {
 
-        if (getColor() == "negro") {
-
-            if (mov.getPosInicial().getFila() == 1 && mov.esVertical() && (mov.saltoVertical()==-1 || mov.saltoVertical()==-2) && !tablero.hayPieza(mov.getPosFinal())) {
+        if (getColor().equals("negro")) {
+            if (mov.esDiagonal() && mov.saltoVertical() == -1 && (mov.saltoHorizontal() == -1 || mov.saltoHorizontal() == 1)) {
                 return true;
-            } else if (mov.getPosInicial().getFila() != 1 && mov.esVertical() && mov.saltoVertical()==1 && !tablero.hayPieza(mov.getPosFinal())) {
-                return true;
+            } else if (mov.getPosInicial().getFila() == 1 && mov.esVertical() && (mov.saltoVertical() == -1 || mov.saltoVertical() == -2) && !tablero.hayPieza(mov.getPosFinal())) {
+                    return true;
+                } else if (mov.getPosInicial().getFila() != 1 && mov.esVertical() && mov.saltoVertical() == -1 && !tablero.hayPieza(mov.getPosFinal())) {
+                    return true;
                 } else {return false;}
 
-        } else if (mov.getPosInicial().getFila() == 6 && mov.esVertical() && (mov.saltoVertical()==1 || mov.saltoVertical()==2) && !tablero.hayPieza(mov.getPosFinal())) {
+        } else if (mov.esDiagonal() && mov.saltoVertical() == 1 && (mov.saltoHorizontal() == -1 || mov.saltoHorizontal() == 1)) {
+            return true;
+            } else if (mov.getPosInicial().getFila() == 6 && mov.esVertical() && (mov.saltoVertical() == 1 || mov.saltoVertical() == 2) && !tablero.hayPieza(mov.getPosFinal())) {
                 return true;
-            } else if (mov.getPosInicial().getFila() != 6 && mov.esVertical() && mov.saltoVertical()==1 && !tablero.hayPieza(mov.getPosFinal())) {
-                return true;
-                } else {return false;}
+                } else if (mov.getPosInicial().getFila() != 6 && mov.esVertical() && mov.saltoVertical() == 1 && !tablero.hayPieza(mov.getPosFinal())) {
+                    return true;
+                    } else {return false;}
     }
 }

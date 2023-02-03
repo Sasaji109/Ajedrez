@@ -33,8 +33,7 @@ public class Rey extends Pieza {
      */
     @Override
     public boolean validoMovimiento(Movimiento mov, Tablero tablero) {
-        if (Math.abs(mov.saltoHorizontal()) == 1 && mov.esVertical()
-                || (Math.abs(mov.saltoHorizontal()) == 1 && mov.saltoVertical() == 1))//falta diagonal
+        if (Math.abs(mov.saltoVertical()) == 1 || Math.abs(mov.saltoHorizontal()) == 1 || (Math.abs(mov.saltoHorizontal()) == 1 && Math.abs(mov.saltoHorizontal()) == 1))
                 return true;
         else
             return false;

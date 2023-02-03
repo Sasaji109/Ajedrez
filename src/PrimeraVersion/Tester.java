@@ -25,6 +25,7 @@ public class Tester {
                 String jugada = lector.nextLine();
                 //traducir jugada->movimiento válido, si no es válido que devuelva null
                 mov = juego.validar(jugada, tablero);
+                tablero.hayPiezasEntre(mov);
 
             } while (mov == null);
 
