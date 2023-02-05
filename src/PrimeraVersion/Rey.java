@@ -28,10 +28,14 @@ public class Rey extends Pieza {
     /**
      * Método para validad los movimientos del Rey
      * @param mov
+     * @param tablero
      * @return
      */
     @Override
-    public boolean validoMovimiento(Movimiento mov) {
-        return false;
+    public boolean validoMovimiento(Movimiento mov, Tablero tablero) {
+        if (Math.abs(mov.saltoVertical()) == 1 || Math.abs(mov.saltoHorizontal()) == 1 || (Math.abs(mov.saltoHorizontal()) == 1 && Math.abs(mov.saltoHorizontal()) == 1))
+                return true;
+        else
+            return false;
     }
 }

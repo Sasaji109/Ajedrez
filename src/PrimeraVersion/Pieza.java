@@ -33,7 +33,7 @@ public abstract class Pieza {
      */
     public Pieza(String colorP) {
         color = colorP;
-        if (color.equals("colorP"))
+        if (color.equals("negro"))
             nombre = this.getClass().getSimpleName().charAt(0)+"n";
         else
             nombre = this.getClass().getSimpleName().charAt(0)+"b";
@@ -57,9 +57,10 @@ public abstract class Pieza {
     /**
      * Método abstracto para validad los movimientos de cada pieza por separado
      * @param mov
+     * @param tablero
      * @return
      */
-    public abstract boolean validoMovimiento (Movimiento mov);
+    public abstract boolean validoMovimiento (Movimiento mov,Tablero tablero);
 
     /**
      * Método toString, que devuelve en texto la pieza

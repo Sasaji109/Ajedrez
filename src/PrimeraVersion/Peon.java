@@ -1,5 +1,7 @@
 package PrimeraVersion;
 
+import java.util.Scanner;
+
 /**
  * Peon: Clase de la pieza hija Peon
  *
@@ -10,6 +12,7 @@ public class Peon extends Pieza {
 
     /**
      * Constructor por defecto
+     *
      * @param color
      * @param nombre
      */
@@ -19,6 +22,7 @@ public class Peon extends Pieza {
 
     /**
      * Constructor pata confirmar color
+     *
      * @param colorP
      */
     public Peon(String colorP) {
@@ -26,12 +30,34 @@ public class Peon extends Pieza {
     }
 
     /**
-     * Método para validad los movimientos del Peon
+     * Método para validad los movimientos del Peón
+     *
      * @param mov
      * @return
      */
     @Override
-    public boolean validoMovimiento(Movimiento mov) {
+    public boolean validoMovimiento(Movimiento mov, Tablero tablero) {
+        Scanner lector = new Scanner(System.in);
+
+        if (getColor().equals("negro")) {
+            if (mov.getPosInicial().getFila() == 7) {
+                System.out.println("A qué pieza deseas promocionar el peón: caballo, alfil, torre o dama");
+            } else if (mov.esDiagonal() && mov.saltoVertical() == -1 && (mov.saltoHorizontal() == -1 || mov.saltoHorizontal() == 1)) {
+                    return true;
+                    } else if (mov.getPosInicial().getFila() == 1 && mov.esVertical() && (mov.saltoVertical() == -1 || mov.saltoVertical() == -2) && !tablero.hayPieza(mov.getPosFinal())) {
+                        return true;
+                        } else if (mov.getPosInicial().getFila() != 1 && mov.esVertical() && mov.saltoVertical() == -1 && !tablero.hayPieza(mov.getPosFinal())) {
+                            return true;
+                            } else {return false;}
+        } else if (mov.getPosInicial().getFila() == 0) {
+
+            } else if (mov.esDiagonal() && mov.saltoVertical() == 1 && (mov.saltoHorizontal() == -1 || mov.saltoHorizontal() == 1)) {
+                return true;
+                } else if (mov.getPosInicial().getFila() == 6 && mov.esVertical() && (mov.saltoVertical() == 1 || mov.saltoVertical() == 2) && !tablero.hayPieza(mov.getPosFinal())) {
+                    return true;
+                    } else if (mov.getPosInicial().getFila() != 6 && mov.esVertical() && mov.saltoVertical() == 1 && !tablero.hayPieza(mov.getPosFinal())) {
+                        return true;
+                        } else {return false;}
         return false;
     }
 }

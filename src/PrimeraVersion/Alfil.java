@@ -28,10 +28,11 @@ public class Alfil extends Pieza {
     /**
      * Método para validad los movimientos del Alfil
      * @param mov
+     * @param tablero
      * @return
      */
     @Override
-    public boolean validoMovimiento(Movimiento mov) {
+    public boolean validoMovimiento(Movimiento mov, Tablero tablero) {
         return mov.esDiagonal();
     }
 }
