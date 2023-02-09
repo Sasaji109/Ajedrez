@@ -35,7 +35,7 @@ public class Tablero {
         tablero[7][4] = new Rey("blanco");
         tablero[7][5] = new Alfil("blanco");
         tablero[7][6] = new Caballo("blanco");
-        tablero[7][7] = new Torre("blanco");
+        tablero[7][7] = new Peon("blanco");
 
         for (int j = 0; j < tablero[0].length; j++) {
             tablero[1][j] = new Peon("negro");
@@ -131,6 +131,45 @@ public class Tablero {
                 for (int j = col2 + 1; j < col1; j++) {
                     if (tablero[i][j] != null) {
                         return true;
+                    }
+                }
+            }
+        } else if (mov.esDiagonal()) {
+            int fila1 = mov.getPosInicial().getFila();
+            int col1 = mov.getPosInicial().getColumna();
+            int fila2 = mov.getPosFinal().getFila();
+            int col2 = mov.getPosFinal().getColumna();
+
+            if (fila1 < fila2 && col1 < col2) {
+                for (int i = fila1 + 1; i < fila2; i++) {
+                    for (int j = col1 + 1; j < col2; j++) {
+                        if (tablero[i][j] != null) {
+                            return true;
+                        }
+                    }
+                }
+            } else if (fila1 > fila2 && col1 < col2) {
+                for (int i = fila2 + 1; i < fila1; i++) {
+                    for (int j = col1 + 1; j < col2; j++) {
+                        if (tablero[i][j] != null) {
+                            return true;
+                        }
+                    }
+                }
+            } else if (fila1 < fila2 && col1 > col2) {
+                for (int i = fila1 + 1; i < fila2; i++) {
+                    for (int j = col2 + 1; j < col1; j++) {
+                        if (tablero[i][j] != null) {
+                            return true;
+                        }
+                    }
+                }
+            } else if (fila1 > fila2 && col1 > col2) {
+                for (int i = fila2 + 1; i < fila1; i++) {
+                    for (int j = col2 + 1; j < col1; j++) {
+                        if (tablero[i][j] != null) {
+                            return true;
+                        }
                     }
                 }
             }
