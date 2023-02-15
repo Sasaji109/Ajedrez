@@ -26,6 +26,24 @@ public class Rey extends Pieza {
     }
 
     /**
+     * Metodo para comprobar la posiblidad del enroque
+     * @param mov
+     * @param tablero
+     * @return
+     */
+    private boolean enroque(Movimiento mov, Tablero tablero) {
+        if (getColor().equals("negro")) {
+            if (mov.getPosInicial().getFila() == 3 && mov.getPosInicial().getColumna() == 3) {
+                return true;
+            }
+        } else if (mov.getPosInicial().getFila() == 3 && mov.getPosInicial().getColumna() == 3) {
+            return true;
+        }
+        return false;
+    }
+
+
+    /**
      * Método para validad los movimientos del Rey
      * @param mov
      * @param tablero
@@ -35,7 +53,9 @@ public class Rey extends Pieza {
     public boolean validoMovimiento(Movimiento mov, Tablero tablero) {
         if (Math.abs(mov.saltoVertical()) == 1 || Math.abs(mov.saltoHorizontal()) == 1 || (Math.abs(mov.saltoHorizontal()) == 1 && Math.abs(mov.saltoHorizontal()) == 1))
                 return true;
-        else
-            return false;
+        else if (enroque() == true) {
+            return true;
+        }
+        return false;
     }
 }

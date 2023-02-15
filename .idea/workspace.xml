@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Ajedrez:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d10c12d3-9e6e-49af-ad62-516a4cb8432e" name="Changes" comment="Quinceavo commit">
+    <list default="true" id="d10c12d3-9e6e-49af-ad62-516a4cb8432e" name="Changes" comment="Dieciseisavo commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrimeraVersion/Rey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrimeraVersion/Rey.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,19 +37,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/1dam/IdeaProjects/POO&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/1dam/IdeaProjects/Ajedrez",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="VersionParadigm" />
@@ -134,7 +144,17 @@
       <workItem from="1675326826473" duration="2632000" />
       <workItem from="1675416172557" duration="2643000" />
       <workItem from="1675418848362" duration="3475000" />
-      <workItem from="1675424967730" duration="622000" />
+      <workItem from="1675424967730" duration="647000" />
+      <workItem from="1675669549215" duration="5164000" />
+      <workItem from="1675686843898" duration="5241000" />
+      <workItem from="1675692443520" duration="21000" />
+      <workItem from="1675771091709" duration="3166000" />
+      <workItem from="1675856871530" duration="739000" />
+      <workItem from="1675931315564" duration="2062000" />
+      <workItem from="1676021024940" duration="1307000" />
+      <workItem from="1676371884827" duration="3504000" />
+      <workItem from="1676379689824" duration="9000" />
+      <workItem from="1676462995423" duration="2940000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1673877893486</created>
@@ -248,7 +268,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675424192150</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Quinceavo commit">
+      <created>1675426460013</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1675426460013</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Dieciseisavo commit">
+      <created>1675933152241</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1675933152241</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +299,7 @@
     <MESSAGE value="Treceavo commit" />
     <MESSAGE value="Catorceavo commit" />
     <MESSAGE value="Quinceavo commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Quinceavo commit" />
+    <MESSAGE value="Dieciseisavo commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dieciseisavo commit" />
   </component>
 </project>
