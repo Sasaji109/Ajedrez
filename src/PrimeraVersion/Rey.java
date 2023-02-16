@@ -9,20 +9,45 @@ package PrimeraVersion;
 public class Rey extends Pieza {
 
     /**
+     * Atributo para corroborar que la pieza se ha movido
+     */
+    private boolean semovio;
+
+    /**
      * Constructor por defecto
      * @param color
      * @param nombre
+     * @param semovio
      */
-    public Rey(String color, String nombre) {
+    public Rey(String color, String nombre, boolean semovio) {
         super(color, nombre);
+        this.semovio = semovio;
     }
 
     /**
-     * Constructor pata confirmar color
+     * Constructor para confirmar color y si se ha movido
      * @param colorP
+     * @param semovio
      */
-    public Rey(String colorP) {
+    public Rey(String colorP, boolean semovio) {
         super(colorP);
+        this.semovio = semovio;
+    }
+
+    /**
+     * Getter del atributo semovio
+     * @return
+     */
+    public boolean isSemovio() {
+        return semovio;
+    }
+
+    /**
+     * Setter del atributo semovio
+     * @param semovio
+     */
+    public void setSemovio(boolean semovio) {
+        this.semovio = semovio;
     }
 
     /**
@@ -32,13 +57,6 @@ public class Rey extends Pieza {
      * @return
      */
     private boolean enroque(Movimiento mov, Tablero tablero) {
-        if (getColor().equals("negro")) {
-            if (mov.getPosInicial().getFila() == 3 && mov.getPosInicial().getColumna() == 3) {
-                return true;
-            }
-        } else if (mov.getPosInicial().getFila() == 3 && mov.getPosInicial().getColumna() == 3) {
-            return true;
-        }
         return false;
     }
 
@@ -51,11 +69,13 @@ public class Rey extends Pieza {
      */
     @Override
     public boolean validoMovimiento(Movimiento mov, Tablero tablero) {
-        if (Math.abs(mov.saltoVertical()) == 1 || Math.abs(mov.saltoHorizontal()) == 1 || (Math.abs(mov.saltoHorizontal()) == 1 && Math.abs(mov.saltoHorizontal()) == 1))
-                return true;
-        else if (enroque() == true) {
+        if (Math.abs(mov.saltoVertical()) == 1 || Math.abs(mov.saltoHorizontal()) == 1 || (Math.abs(mov.saltoHorizontal()) == 1 && Math.abs(mov.saltoHorizontal()) == 1)) {
+            setSemovio(true);
             return true;
-        }
-        return false;
+        } else if (semovio = false && Math.abs(mov.saltoHorizontal()) == 2) {
+                return true;
+                } else {
+                    return false;
+                }
     }
 }

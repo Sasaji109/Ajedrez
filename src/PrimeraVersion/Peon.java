@@ -54,7 +54,7 @@ public class Peon extends Pieza {
                             tablero.tablero[mov.getPosFinal().getFila()][mov.getPosFinal().getColumna()] = new Alfil(this.getColor());
                             break;
                         case "torre":
-                            tablero.tablero[mov.getPosFinal().getFila()][mov.getPosFinal().getColumna()] = new Torre(this.getColor());
+                            tablero.tablero[mov.getPosFinal().getFila()][mov.getPosFinal().getColumna()] = new Torre(this.getColor(),true);
                             break;
                         case "dama":
                             tablero.tablero[mov.getPosFinal().getFila()][mov.getPosFinal().getColumna()] = new Dama(this.getColor());
@@ -86,7 +86,7 @@ public class Peon extends Pieza {
                         tablero.tablero[mov.getPosFinal().getFila()][mov.getPosFinal().getColumna()] = new Alfil(this.getColor());
                         break;
                     case "torre":
-                        tablero.tablero[mov.getPosFinal().getFila()][mov.getPosFinal().getColumna()] = new Torre(this.getColor());
+                        tablero.tablero[mov.getPosFinal().getFila()][mov.getPosFinal().getColumna()] = new Torre(this.getColor(),true);
                         break;
                     case "dama":
                         tablero.tablero[mov.getPosFinal().getFila()][mov.getPosFinal().getColumna()] = new Dama(this.getColor());
