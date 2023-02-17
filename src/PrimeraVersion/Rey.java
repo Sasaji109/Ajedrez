@@ -50,16 +50,6 @@ public class Rey extends Pieza {
         this.semovio = semovio;
     }
 
-    /**
-     * Metodo para comprobar la posiblidad del enroque
-     * @param mov
-     * @param tablero
-     * @return
-     */
-    private boolean enroque(Movimiento mov, Tablero tablero) {
-        return false;
-    }
-
 
     /**
      * Método para validad los movimientos del Rey

@@ -246,5 +246,8 @@ public class Tablero {
     public void mover(Movimiento mov) {
         ponPieza(DevuelvePieza(mov.getPosInicial()), mov.getPosFinal());
         quitaPieza(mov.getPosInicial());
+        if (DevuelvePieza()) {
+
+        }
     }
 }
