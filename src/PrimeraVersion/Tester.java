@@ -31,6 +31,7 @@ public class Tester {
             System.out.println(mov);
             if (tablero.DevuelvePieza(mov.getPosInicial()).validoMovimiento(mov,tablero) && !tablero.hayPiezasEntre(mov)) {
                 tablero.mover(mov);
+                tablero.enroque(mov);
                 if (juego.isTurno()) {
                     juego.setTurno(false);
                 } else {

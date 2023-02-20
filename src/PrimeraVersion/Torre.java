@@ -33,6 +33,22 @@ public class Torre extends Pieza {
     }
 
     /**
+     * Getter del atributo semovio
+     * @return
+     */
+    public boolean isSemovio() {
+        return semovio;
+    }
+
+    /**
+     * Setter del atributo semovio
+     * @param semovio
+     */
+    public void setSemovio(boolean semovio) {
+        this.semovio = semovio;
+    }
+
+    /**
      * Método para validad los movimientos del Torre
      * @param mov
      * @param tablero
@@ -41,6 +57,5 @@ public class Torre extends Pieza {
     @Override
     public boolean validoMovimiento(Movimiento mov,Tablero tablero) {
         return mov.esVertical() || mov.esHorizontal();
-
     }
 }

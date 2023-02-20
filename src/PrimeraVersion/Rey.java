@@ -1,5 +1,4 @@
 package PrimeraVersion;
-
 /**
  * Rey: Clase de la pieza hija Rey
  *
@@ -59,13 +58,13 @@ public class Rey extends Pieza {
      */
     @Override
     public boolean validoMovimiento(Movimiento mov, Tablero tablero) {
-        if (Math.abs(mov.saltoVertical()) == 1 || Math.abs(mov.saltoHorizontal()) == 1 || (Math.abs(mov.saltoHorizontal()) == 1 && Math.abs(mov.saltoHorizontal()) == 1)) {
-            setSemovio(true);
+        if (semovio == false && Math.abs(mov.saltoHorizontal()) == 2 && Math.abs(mov.saltoVertical()) == 0) {
             return true;
-        } else if (semovio = false && Math.abs(mov.saltoHorizontal()) == 2) {
-                return true;
-                } else {
-                    return false;
-                }
+        } else if (Math.abs(mov.saltoVertical()) == 1 || Math.abs(mov.saltoHorizontal()) == 1 || (Math.abs(mov.saltoHorizontal()) == 1 && Math.abs(mov.saltoHorizontal()) == 1)) {
+            semovio = true;
+            return true;
+        } else {
+            return false;
+        }
     }
 }
