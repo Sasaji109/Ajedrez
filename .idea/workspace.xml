@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e3f5346-0e37-4ce5-bed6-eda6c33449f8" name="Changes" comment="Doceavo commit" />
+    <list default="true" id="0e3f5346-0e37-4ce5-bed6-eda6c33449f8" name="Changes" comment="Doceavo commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +37,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/1dam/IdeaProjects/POO&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sasaj/IdeaProjects/Ajedrez&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -128,7 +130,10 @@
       <workItem from="1674477466059" duration="4897000" />
       <workItem from="1674646236070" duration="6236000" />
       <workItem from="1674929942562" duration="15891000" />
-      <workItem from="1675602769967" duration="517000" />
+      <workItem from="1675602769967" duration="939000" />
+      <workItem from="1676655146621" duration="2031000" />
+      <workItem from="1676742005903" duration="1688000" />
+      <workItem from="1676905411269" duration="777000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1673877893486</created>
@@ -221,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675603090605</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Doceavo commit">
+      <created>1675603312456</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1675603312456</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
