@@ -1,5 +1,4 @@
 package PrimeraVersion;
-
 /**
  * Rey: Clase de la pieza hija Rey
  *
@@ -9,21 +8,47 @@ package PrimeraVersion;
 public class Rey extends Pieza {
 
     /**
+     * Atributo para corroborar que la pieza se ha movido
+     */
+    private boolean semovio;
+
+    /**
      * Constructor por defecto
      * @param color
      * @param nombre
+     * @param semovio
      */
-    public Rey(String color, String nombre) {
+    public Rey(String color, String nombre, boolean semovio) {
         super(color, nombre);
+        this.semovio = semovio;
     }
 
     /**
-     * Constructor pata confirmar color
+     * Constructor para confirmar color y si se ha movido
      * @param colorP
+     * @param semovio
      */
-    public Rey(String colorP) {
+    public Rey(String colorP, boolean semovio) {
         super(colorP);
+        this.semovio = semovio;
     }
+
+    /**
+     * Getter del atributo semovio
+     * @return
+     */
+    public boolean isSemovio() {
+        return semovio;
+    }
+
+    /**
+     * Setter del atributo semovio
+     * @param semovio
+     */
+    public void setSemovio(boolean semovio) {
+        this.semovio = semovio;
+    }
+
 
     /**
      * Método para validad los movimientos del Rey
@@ -33,9 +58,13 @@ public class Rey extends Pieza {
      */
     @Override
     public boolean validoMovimiento(Movimiento mov, Tablero tablero) {
-        if (Math.abs(mov.saltoVertical()) == 1 || Math.abs(mov.saltoHorizontal()) == 1 || (Math.abs(mov.saltoHorizontal()) == 1 && Math.abs(mov.saltoHorizontal()) == 1))
-                return true;
-        else
+        if (semovio == false && Math.abs(mov.saltoHorizontal()) == 2 && Math.abs(mov.saltoVertical()) == 0) {
+            return true;
+        } else if (Math.abs(mov.saltoVertical()) == 1 || Math.abs(mov.saltoHorizontal()) == 1 || (Math.abs(mov.saltoHorizontal()) == 1 && Math.abs(mov.saltoHorizontal()) == 1)) {
+            semovio = true;
+            return true;
+        } else {
             return false;
+        }
     }
 }

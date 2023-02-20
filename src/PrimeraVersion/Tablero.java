@@ -20,22 +20,22 @@ public class Tablero {
     public Tablero() {
 
         tablero = new Pieza[8][8];
-        tablero[0][0] = new Torre("negro");
-        tablero[0][1] = new Caballo("negro");
-        tablero[0][2] = new Alfil("negro");
-        tablero[0][3] = new Dama("negro");
-        tablero[0][4] = new Rey("negro");
+        tablero[0][0] = new Torre("negro",false);
+        //tablero[0][1] = new Caballo("negro");
+        //tablero[0][2] = new Alfil("negro");
+        //tablero[0][3] = new Dama("negro");
+        tablero[0][4] = new Rey("negro",false);
         tablero[0][5] = new Alfil("negro");
         tablero[0][6] = new Caballo("negro");
-        tablero[0][7] = new Torre("negro");
-        tablero[7][0] = new Torre("blanco");
+        tablero[0][7] = new Torre("negro",false);
+        tablero[7][0] = new Torre("blanco",false);
         tablero[7][1] = new Caballo("blanco");
         tablero[7][2] = new Alfil("blanco");
         tablero[7][3] = new Dama("blanco");
-        tablero[7][4] = new Rey("blanco");
-        tablero[7][5] = new Alfil("blanco");
-        tablero[7][6] = new Caballo("blanco");
-        tablero[7][7] = new Torre("blanco");
+        tablero[7][4] = new Rey("blanco",false);
+        //tablero[7][5] = new Alfil("blanco");
+        //tablero[7][6] = new Caballo("blanco");
+        tablero[7][7] = new Torre("blanco",false);
 
         for (int j = 0; j < tablero[0].length; j++) {
             tablero[1][j] = new Peon("negro");
@@ -134,6 +134,45 @@ public class Tablero {
                     }
                 }
             }
+        } else if (mov.esDiagonal()) {
+            int fila1 = mov.getPosInicial().getFila();
+            int col1 = mov.getPosInicial().getColumna();
+            int fila2 = mov.getPosFinal().getFila();
+            int col2 = mov.getPosFinal().getColumna();
+
+            if (fila1 < fila2 && col1 < col2) {
+                for (int i = fila1 + 1; i < fila2; i++) {
+                    for (int j = col1 + 1; j < col2; j++) {
+                        if (tablero[i][j] != null) {
+                            return true;
+                        }
+                    }
+                }
+            } else if (fila1 > fila2 && col1 < col2) {
+                for (int i = fila2 + 1; i < fila1; i++) {
+                    for (int j = col1 + 1; j < col2; j++) {
+                        if (tablero[i][j] != null) {
+                            return true;
+                        }
+                    }
+                }
+            } else if (fila1 < fila2 && col1 > col2) {
+                for (int i = fila1 + 1; i < fila2; i++) {
+                    for (int j = col2 + 1; j < col1; j++) {
+                        if (tablero[i][j] != null) {
+                            return true;
+                        }
+                    }
+                }
+            } else if (fila1 > fila2 && col1 > col2) {
+                for (int i = fila2 + 1; i < fila1; i++) {
+                    for (int j = col2 + 1; j < col1; j++) {
+                        if (tablero[i][j] != null) {
+                            return true;
+                        }
+                    }
+                }
+            }
         }
         return false;
     }
@@ -207,5 +246,35 @@ public class Tablero {
     public void mover(Movimiento mov) {
         ponPieza(DevuelvePieza(mov.getPosInicial()), mov.getPosFinal());
         quitaPieza(mov.getPosInicial());
+    }
+
+    /**
+     *
+     * @param mov
+     */
+    public void enroque(Movimiento mov, boolean turno) {
+        Posicion posRey = null;
+        if (turno == true) {
+            posRey = damePosRey ("blanco");
+        } else {
+            posRey = damePosRey ("negro");
+        }
+        if (turno == true && hayPieza(7,0) && DevuelvePieza(7,0).getColor().equalsIgnoreCase("blanco")
+                && DevuelvePieza(7,0) instanceof Torre && !((Torre)DevuelvePieza(7,0)).isSemovio()) {
+            //enroque con la torre de la izquierda las blancas siempre y cuando no hay piezasEntre (new Movimiento (new Posicion(7,0), posRey)
+
+        }
+    }
+
+    private Posicion damePosRey(String color) {
+        for (int i = tablero, i < tablero.length; i++) {
+            for (int j = tablero; j < tablero.length; j++) {
+                if (DevuelvePieza(i,j).getNombre().equalsIgnoreCase("Rey")) {
+                    return color;
+                }
+            }
+        }
+        //Buscar al rey del color
+        return null;
     }
 }

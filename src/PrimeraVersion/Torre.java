@@ -9,6 +9,11 @@ package PrimeraVersion;
 public class Torre extends Pieza {
 
     /**
+     * Atributo para corroborar que la pieza se ha movido
+     */
+    private boolean semovio;
+
+    /**
      * Constructor por defecto
      * @param color
      * @param nombre
@@ -18,11 +23,29 @@ public class Torre extends Pieza {
     }
 
     /**
-     * Constructor pata confirmar color
+     * Constructor para confirmar color y si se ha movido
      * @param colorP
+     * @param semovio
      */
-    public Torre(String colorP) {
+    public Torre(String colorP, boolean semovio) {
         super(colorP);
+        this.semovio = semovio;
+    }
+
+    /**
+     * Getter del atributo semovio
+     * @return
+     */
+    public boolean isSemovio() {
+        return semovio;
+    }
+
+    /**
+     * Setter del atributo semovio
+     * @param semovio
+     */
+    public void setSemovio(boolean semovio) {
+        this.semovio = semovio;
     }
 
     /**
@@ -34,6 +57,5 @@ public class Torre extends Pieza {
     @Override
     public boolean validoMovimiento(Movimiento mov,Tablero tablero) {
         return mov.esVertical() || mov.esHorizontal();
-
     }
 }
