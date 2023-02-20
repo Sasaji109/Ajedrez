@@ -25,13 +25,13 @@ public class Tablero {
         //tablero[0][2] = new Alfil("negro");
         //tablero[0][3] = new Dama("negro");
         tablero[0][4] = new Rey("negro",false);
-        tablero[0][5] = new Alfil("negro");
-        tablero[0][6] = new Caballo("negro");
+        //tablero[0][5] = new Alfil("negro");
+        //tablero[0][6] = new Caballo("negro");
         tablero[0][7] = new Torre("negro",false);
         tablero[7][0] = new Torre("blanco",false);
-        tablero[7][1] = new Caballo("blanco");
-        tablero[7][2] = new Alfil("blanco");
-        tablero[7][3] = new Dama("blanco");
+        //tablero[7][1] = new Caballo("blanco");
+        //tablero[7][2] = new Alfil("blanco");
+        //tablero[7][3] = new Dama("blanco");
         tablero[7][4] = new Rey("blanco",false);
         //tablero[7][5] = new Alfil("blanco");
         //tablero[7][6] = new Caballo("blanco");
@@ -249,32 +249,56 @@ public class Tablero {
     }
 
     /**
-     *
+     * Enroque con la torre de la izquierda las blancas siempre y cuando no hay piezasEntre (new Movimiento (new Posicion(7,0), posRey)
      * @param mov
      */
     public void enroque(Movimiento mov, boolean turno) {
         Posicion posRey = null;
         if (turno == true) {
-            posRey = damePosRey ("blanco");
+            posRey = damePosRey("blanco");
         } else {
-            posRey = damePosRey ("negro");
+            posRey = damePosRey("negro");
         }
         if (turno == true && hayPieza(7,0) && DevuelvePieza(7,0).getColor().equalsIgnoreCase("blanco")
                 && DevuelvePieza(7,0) instanceof Torre && !((Torre)DevuelvePieza(7,0)).isSemovio()) {
-            //enroque con la torre de la izquierda las blancas siempre y cuando no hay piezasEntre (new Movimiento (new Posicion(7,0), posRey)
-
+            Posicion posTorre = new Posicion(7, 0);
+            mover(new Movimiento(posRey, new Posicion(7,2)));
+            mover(new Movimiento(posTorre, new Posicion(7,3)));
+        }
+        if (turno == true && hayPieza(7,7) && DevuelvePieza(7,7).getColor().equalsIgnoreCase("blanco")
+                && DevuelvePieza(7,7) instanceof Torre && !((Torre)DevuelvePieza(7,7)).isSemovio()) {
+            Posicion posTorre = new Posicion(7, 7);
+            mover(new Movimiento(posRey, new Posicion(7,6)));
+            mover(new Movimiento(posTorre, new Posicion(7,5)));
+        }
+        if (turno == false && hayPieza(0,0) && DevuelvePieza(0,0).getColor().equalsIgnoreCase("negro")
+                && DevuelvePieza(0,0) instanceof Torre && !((Torre)DevuelvePieza(0,0)).isSemovio()) {
+            Posicion posTorre = new Posicion(0, 0);
+            mover(new Movimiento(posRey, new Posicion(0,2)));
+            mover(new Movimiento(posTorre, new Posicion(0,3)));
+        }
+        if (turno == false && hayPieza(0,7) && DevuelvePieza(0,7).getColor().equalsIgnoreCase("negro")
+                && DevuelvePieza(0,7) instanceof Torre && !((Torre)DevuelvePieza(0,7)).isSemovio()) {
+            Posicion posTorre = new Posicion(0, 7);
+            mover(new Movimiento(posRey, new Posicion(0,6)));
+            mover(new Movimiento(posTorre, new Posicion(0,5)));
         }
     }
 
+    /**
+     * Método para recorrer el tablero en busca del rey
+     * @param color
+     * @return
+     */
     private Posicion damePosRey(String color) {
-        for (int i = tablero, i < tablero.length; i++) {
-            for (int j = tablero; j < tablero.length; j++) {
-                if (DevuelvePieza(i,j).getNombre().equalsIgnoreCase("Rey")) {
-                    return color;
+        for (int i = 0; i < tablero.length; i++) {
+            for (int j = 0; j < tablero[i].length; j++) {
+                Pieza piezaActual = DevuelvePieza(i,j);
+                if (piezaActual != null && piezaActual.getNombre().equalsIgnoreCase("rey") && piezaActual.getColor().equalsIgnoreCase(color)) {
+                    return new Posicion(i, j);
                 }
             }
         }
-        //Buscar al rey del color
         return null;
     }
 }
